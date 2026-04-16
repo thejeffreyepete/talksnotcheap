@@ -4,419 +4,193 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talk's Not Cheap — Jeffrey Epete</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-
-<!-- Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="https://i.ibb.co/WW828Xjg/20260325-230228.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1643172083543188');
-fbq('track', 'PageView');
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1643172083543188');fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"/></noscript>
 <style>
-  :root {
-    --black: #0D0D0D;
-    --white: #F5F2EC;
-    --red: #C8301C;
-    --red-dark: #A02412;
-    --blue: #1A2E6B;
-    --gold: #C9960A;
-    --warm-gray: #E8E4DC;
-    --mid-gray: #B8B3AA;
-    --text-muted: #6B6660;
-    --text-body: #242220;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--white);
-    color: var(--text-body);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
-    line-height: 1.75;
-    overflow-x: hidden;
-  }
-
-  /* ── STICKY NAV ── */
-  .sticky-nav {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: var(--black);
-    border-top: 2px solid var(--red);
-    padding: 13px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 200;
-    transform: translateY(100%);
-    transition: transform 0.35s cubic-bezier(.4,0,.2,1);
-  }
-  .sticky-nav.visible { transform: translateY(0); }
-  .sticky-nav-text { font-size: 13px; color: rgba(245,242,236,0.6); line-height: 1.4; }
-  .sticky-nav-text strong { color: var(--white); display: block; }
-
-  /* ── BUTTONS ── */
-  .btn {
-    display: inline-block;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-red { background: var(--red); color: #fff; padding: 18px 44px; font-size: 15px; }
-  .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); }
-  .btn-red-sm { background: var(--red); color: #fff; padding: 13px 28px; font-size: 13px; }
-  .btn-red-sm:hover { background: var(--red-dark); }
-  .btn-black {
-    background: var(--black); color: var(--white);
-    padding: 16px 0; font-size: 14px;
-    display: block; width: 100%;
-    text-align: center; letter-spacing: 0.08em;
-    text-decoration: none; transition: background 0.2s;
-  }
-  .btn-black:hover { background: var(--red); }
-  .btn-white { background: #fff; color: var(--red); padding: 20px 56px; font-size: 16px; }
-  .btn-white:hover { transform: translateY(-2px); }
-
-  /* ── HERO ── */
-  .hero {
-    background: var(--black);
-    color: var(--white);
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: -20%; right: -10%;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,48,28,0.12) 0%, transparent 65%);
-    pointer-events: none;
-  }
-  .hero-left {
-    display: flex; flex-direction: column;
-    justify-content: center;
-    padding: 80px 56px 80px 80px;
-    position: relative; z-index: 2;
-  }
-  .hero-eyebrow {
-    font-size: 12px; font-weight: 500;
-    letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--red); margin-bottom: 28px;
-    display: flex; align-items: center; gap: 14px;
-  }
-  .hero-eyebrow::before {
-    content: ''; width: 36px; height: 1.5px;
-    background: var(--red); flex-shrink: 0;
-  }
-  .hero-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(80px, 11vw, 128px);
-    line-height: 0.88; letter-spacing: 0.01em; margin-bottom: 36px;
-  }
-  .hero-title em { display: block; color: var(--red); font-style: normal; }
-  .hero-subtitle {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(17px, 2.2vw, 22px);
-    font-style: italic; color: rgba(245,242,236,0.78);
-    line-height: 1.55; margin-bottom: 12px; max-width: 460px;
-  }
-  .hero-subtitle-support {
-    font-size: 14px; color: rgba(245,242,236,0.42);
-    margin-bottom: 48px; max-width: 420px;
-    line-height: 1.65; font-style: italic;
-  }
-  .hero-cta-row { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
-  .hero-price-note { font-size: 13px; color: rgba(245,242,236,0.4); }
-  .hero-price-note strong { color: var(--gold); font-size: 17px; font-weight: 500; }
-
-  .hero-right {
-    display: flex; align-items: center;
-    justify-content: center;
-    padding: 60px 80px 60px 20px;
-    position: relative; z-index: 2;
-  }
-  .book-mock { position: relative; width: 100%; max-width: 320px; }
-  .book-mock::before {
-    content: ''; position: absolute; inset: -32px;
-    background: radial-gradient(ellipse, rgba(200,48,28,0.22) 0%, transparent 68%);
-    pointer-events: none;
-  }
-  .book-img {
-    width: 100%; display: block;
-    transform: rotate(-2.5deg);
-    box-shadow: 32px 48px 80px rgba(0,0,0,0.7);
-    transition: transform 0.5s ease;
-  }
-  .book-img:hover { transform: rotate(0deg) scale(1.02); }
-
-  /* ── ANNOUNCE ── */
-  .announce {
-    background: var(--red); color: #fff;
-    text-align: center; padding: 13px 24px;
-    font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
-  }
-
-  /* ── GUARANTEE ── */
-  .guarantee { background: var(--blue); color: var(--white); padding: 72px 24px; }
-  .guarantee-inner {
-    max-width: 760px; margin: 0 auto;
-    display: grid; grid-template-columns: 110px 1fr;
-    gap: 48px; align-items: center;
-  }
-  .g-seal {
-    width: 110px; height: 110px; border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.25);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    text-align: center; flex-shrink: 0;
-  }
-  .g-seal span {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 12px; letter-spacing: 0.14em;
-    color: var(--gold); line-height: 1.5;
-  }
-  .g-body h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(17px, 2.2vw, 24px);
-    color: var(--white); margin-bottom: 14px; line-height: 1.4;
-  }
-  .g-body p { font-size: 15px; color: rgba(245,242,236,0.7); line-height: 1.85; }
-  .g-body p strong { color: var(--gold); }
-
-  /* ── LETTER ── */
-  .letter-section { background: var(--white); padding: 96px 24px; }
-  .letter-inner { max-width: 700px; margin: 0 auto; }
-  .section-eyebrow {
-    font-size: 12px; font-weight: 500;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--text-muted); margin-bottom: 40px;
-    display: flex; align-items: center; gap: 14px;
-  }
-  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--warm-gray); }
-  .letter-inner p { font-size: 17px; line-height: 1.9; margin-bottom: 22px; color: var(--text-body); }
-  .pull-quote {
-    border-left: 3px solid var(--red);
-    padding: 18px 32px; margin: 40px 0;
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(22px, 3vw, 30px);
-    font-style: italic; line-height: 1.4;
-    color: var(--blue); background: rgba(26,46,107,0.04);
-  }
-  .letter-sig {
-    margin-top: 40px;
-    font-family: 'DM Serif Display', serif;
-    font-style: italic; font-size: 22px; color: var(--text-body);
-  }
-
-  /* ── DARK DIVIDER ── */
-  .dark-divider { background: var(--black); color: var(--white); padding: 88px 24px; text-align: center; }
-  .dark-divider-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(38px, 6vw, 76px);
-    line-height: 1; margin-bottom: 20px;
-  }
-  .dark-divider-title em { color: var(--red); font-style: normal; }
-  .dark-divider p { font-size: 17px; color: rgba(245,242,236,0.55); max-width: 560px; margin: 0 auto; line-height: 1.75; }
-
-  /* ── WHAT'S INSIDE ── */
-  .inside-section { background: var(--warm-gray); padding: 96px 24px; }
-  .section-wide { max-width: 1080px; margin: 0 auto; }
-  .section-heading {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(38px, 5.5vw, 62px);
-    line-height: 0.95; margin-bottom: 10px;
-  }
-  .section-sub { font-size: 16px; color: var(--text-muted); margin-bottom: 52px; max-width: 520px; line-height: 1.65; }
-  .inside-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(296px, 1fr)); gap: 2px; }
-  .inside-card {
-    background: var(--white); padding: 36px 30px;
-    border-top: 3px solid transparent;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .inside-card:hover { border-color: var(--red); transform: translateY(-3px); }
-  .inside-num { font-family: 'Bebas Neue', sans-serif; font-size: 52px; color: var(--warm-gray); line-height: 1; margin-bottom: 10px; }
-  .inside-title { font-weight: 500; font-size: 16px; margin-bottom: 10px; color: var(--black); }
-  .inside-desc { font-size: 15px; color: var(--text-muted); line-height: 1.7; }
-
-  /* ── QUOTE BANNER ── */
-  .quote-banner { background: var(--red); color: #fff; padding: 88px 24px; text-align: center; }
-  .quote-banner blockquote {
-    font-family: 'DM Serif Display', serif; font-style: italic;
-    font-size: clamp(22px, 3.5vw, 40px); line-height: 1.35;
-    max-width: 820px; margin: 0 auto 22px;
-  }
-  .quote-attr { font-size: 12px; opacity: 0.65; letter-spacing: 0.18em; text-transform: uppercase; }
-
-  /* ── DIFFERENTIATOR ── */
-  .diff-section { background: var(--black); padding: 80px 24px; text-align: center; }
-  .diff-line1 {
-    font-size: clamp(16px, 2vw, 20px);
-    color: rgba(245,242,236,0.5); margin-bottom: 12px;
-    font-style: italic; font-family: 'DM Serif Display', serif;
-  }
-  .diff-line2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 5vw, 58px); color: var(--white); line-height: 1; }
-  .diff-line2 em { color: var(--red); font-style: normal; }
-
-  /* ── IMPACT STRIP ── */
-  .impact-strip { background: var(--blue); padding: 64px 24px; }
-  .impact-strip-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-  .impact-item { background: rgba(255,255,255,0.06); padding: 36px 28px; text-align: center; border-top: 2px solid rgba(200,48,28,0.5); }
-  .impact-item-icon { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 500; }
-  .impact-item-text { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(16px, 2vw, 20px); color: rgba(245,242,236,0.82); line-height: 1.5; }
-
-  /* ── FOR / NOT FOR ── */
-  .for-section { background: var(--white); padding: 96px 24px; }
-  .for-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 52px; max-width: 900px; }
-  .for-col-label { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid currentColor; }
-  .for-yes .for-col-label { color: var(--red); }
-  .for-no .for-col-label { color: var(--mid-gray); }
-  .for-list { list-style: none; }
-  .for-list li { font-size: 16px; padding: 13px 0; border-bottom: 1px solid var(--warm-gray); display: flex; gap: 12px; align-items: flex-start; line-height: 1.5; color: var(--text-body); }
-  .for-list li::before { flex-shrink: 0; margin-top: 2px; }
-  .for-yes .for-list li::before { content: '✓'; color: var(--red); font-weight: 500; font-size: 14px; }
-  .for-no .for-list li { color: var(--text-muted); }
-  .for-no .for-list li::before { content: '—'; color: #ccc; font-size: 14px; }
-
-  /* ── AUTHOR ── */
-  .author-section { background: var(--black); color: var(--white); padding: 96px 24px; }
-  .author-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; gap: 72px; align-items: start; }
-  .author-photo-wrap { position: relative; }
-  .author-photo { width: 100%; display: block; border: 3px solid rgba(200,48,28,0.4); }
-  .author-photo-credit { position: absolute; bottom: -18px; left: 0; right: 0; text-align: center; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); font-weight: 500; }
-  .author-body .section-heading { color: var(--white); margin-bottom: 28px; }
-  .author-body p { font-size: 16px; color: rgba(245,242,236,0.68); line-height: 1.85; margin-bottom: 20px; }
-  .author-body p strong { color: var(--white); }
-  .author-sig { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 22px; color: var(--gold); margin-top: 32px; }
-
-  /* ── TESTIMONIALS ── */
-  .testimonials-section { background: var(--warm-gray); padding: 96px 24px; }
-  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; margin-top: 52px; }
-  .t-card { background: var(--white); padding: 36px 30px; }
-  .t-stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
-  .t-quote { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 17px; line-height: 1.7; color: var(--text-body); margin-bottom: 24px; }
-  .t-quote::before { content: '\201C'; }
-  .t-quote::after { content: '\201D'; }
-  .t-name { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
-
-  /* ── OFFER ── */
-  .offer-section { background: var(--white); padding: 96px 24px; }
-  .offer-wrap { max-width: 800px; margin: 0 auto; border: 1.5px solid var(--black); }
-  .offer-header { background: var(--black); color: var(--white); padding: 36px 48px; text-align: center; }
-  .offer-header p { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
-  .offer-header-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 56px); line-height: 1; }
-  .offer-body { padding: 48px; }
-  .offer-tier { border: 1px solid var(--warm-gray); padding: 32px; margin-bottom: 16px; position: relative; transition: border-color 0.2s; }
-  .offer-tier:hover { border-color: var(--red); }
-  .offer-tier.featured { border: 1.5px solid var(--red); }
-  .offer-badge { position: absolute; top: -12px; left: 32px; background: var(--red); color: #fff; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; padding: 4px 14px; }
-  .offer-tier-name { font-weight: 500; font-size: 17px; margin-bottom: 6px; color: var(--black); }
-  .offer-tier-price { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--red); line-height: 1; margin-bottom: 20px; }
-  .offer-includes { list-style: none; margin-bottom: 24px; }
-  .offer-includes li { font-size: 15px; padding: 7px 0; border-bottom: 1px solid var(--warm-gray); display: flex; gap: 10px; align-items: flex-start; color: var(--text-body); line-height: 1.5; }
-  .offer-includes li::before { content: '✓'; color: var(--red); font-size: 13px; font-weight: 500; flex-shrink: 0; margin-top: 2px; }
-  .offer-tier.featured .btn-black { background: var(--red); }
-  .offer-tier.featured .btn-black:hover { background: var(--red-dark); }
-  .guarantee-nudge { text-align: center; font-size: 14px; font-style: italic; color: var(--text-muted); margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--warm-gray); }
-
-  /* ── HURRY ── */
-  .hurry-section { background: var(--black); color: var(--white); padding: 88px 24px; text-align: center; }
-  .hurry-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 6vw, 72px); line-height: 1; margin-bottom: 28px; }
-  .hurry-title em { color: var(--red); font-style: normal; }
-  .hurry-body { font-size: clamp(17px, 2vw, 21px); color: rgba(245,242,236,0.75); max-width: 640px; margin: 0 auto 40px; line-height: 1.8; font-family: 'DM Serif Display', serif; font-style: italic; }
-
-  /* ── FAQ ── */
-  .faq-section { background: var(--white); padding: 96px 24px; }
-  .faq-list { max-width: 700px; margin: 52px auto 0; }
-  .faq-item { border-bottom: 1px solid var(--warm-gray); padding: 26px 0; }
-  .faq-q { font-weight: 500; font-size: 17px; margin-bottom: 10px; color: var(--black); }
-  .faq-a { font-size: 16px; color: var(--text-muted); line-height: 1.78; }
-
-  /* ── FINAL CTA ── */
-  .final-cta { background: var(--red); color: #fff; padding: 128px 24px; text-align: center; }
-  .final-cta-big { font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 10vw, 112px); line-height: 0.92; margin-bottom: 28px; }
-  .final-cta-sub { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(18px, 2.5vw, 28px); opacity: 0.82; margin-bottom: 52px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.4; }
-
-  /* ── FOOTER ── */
-  footer { background: var(--black); color: rgba(245,242,236,0.35); padding: 40px 24px; text-align: center; font-size: 13px; line-height: 1.8; }
-  footer a { color: rgba(245,242,236,0.35); text-decoration: none; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 800px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 64px 28px 32px; }
-    .hero-right { padding: 0 28px 64px; justify-content: flex-start; }
-    .book-mock { max-width: 220px; }
-    .guarantee-inner { grid-template-columns: 1fr; }
-    .g-seal { margin: 0 auto; }
-    .for-grid { grid-template-columns: 1fr; gap: 40px; }
-    .author-inner { grid-template-columns: 1fr; gap: 40px; }
-    .author-photo { max-width: 220px; }
-    .impact-strip-inner { grid-template-columns: 1fr; }
-    .offer-body { padding: 24px 20px; }
-    .sticky-nav .sticky-nav-text { display: none; }
-  }
+:root{--black:#0D0D0D;--white:#F5F2EC;--red:#C8301C;--red-dark:#A02412;--blue:#1A2E6B;--gold:#C9960A;--warm-gray:#E8E4DC;--mid-gray:#B8B3AA;--text-muted:#6B6660;--text-body:#242220}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text-body);font-family:'DM Sans',Georgia,sans-serif;font-size:18px;line-height:1.75;overflow-x:hidden}
+.sticky-nav{position:fixed;bottom:0;left:0;right:0;background:var(--black);border-top:2px solid var(--red);padding:13px 32px;display:flex;align-items:center;justify-content:space-between;z-index:200;transform:translateY(100%);transition:transform 0.35s cubic-bezier(.4,0,.2,1)}
+.sticky-nav.visible{transform:translateY(0)}
+.sticky-nav-text{font-size:13px;color:rgba(245,242,236,0.6);line-height:1.4}
+.sticky-nav-text strong{color:var(--white);display:block}
+.btn{display:inline-block;font-family:'DM Sans',Georgia,sans-serif;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:background 0.2s,transform 0.15s}
+.btn-red{background:var(--red);color:#fff;padding:18px 44px;font-size:15px}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-red-sm{background:var(--red);color:#fff;padding:13px 28px;font-size:13px}
+.btn-red-sm:hover{background:var(--red-dark)}
+.btn-black{background:var(--black);color:var(--white);padding:16px 0;font-size:14px;display:block;width:100%;text-align:center;letter-spacing:0.08em;text-decoration:none;transition:background 0.2s}
+.btn-black:hover{background:var(--red)}
+.btn-white{background:#fff;color:var(--red);padding:20px 56px;font-size:16px}
+.btn-white:hover{transform:translateY(-2px)}
+.hero{background:var(--black);color:var(--white);min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(200,48,28,0.12) 0%,transparent 65%);pointer-events:none}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 56px 80px 80px;position:relative;z-index:2}
+.hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:28px;display:flex;align-items:center;gap:14px}
+.hero-eyebrow::before{content:'';width:36px;height:1.5px;background:var(--red);flex-shrink:0}
+.hero-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(80px,11vw,128px);line-height:0.88;letter-spacing:0.01em;margin-bottom:36px}
+.hero-title em{display:block;color:var(--red);font-style:normal}
+.hero-subtitle{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(17px,2.2vw,22px);font-style:italic;color:rgba(245,242,236,0.78);line-height:1.55;margin-bottom:12px;max-width:460px}
+.hero-subtitle-support{font-size:14px;color:rgba(245,242,236,0.42);margin-bottom:32px;max-width:420px;line-height:1.65;font-style:italic}
+.hero-cta-row{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.hero-price-note{font-size:13px;color:rgba(245,242,236,0.4)}
+.hero-price-note strong{color:var(--gold);font-size:17px;font-weight:500}
+.hero-right{display:flex;align-items:center;justify-content:center;padding:60px 80px 60px 20px;position:relative;z-index:2}
+.book-mock{position:relative;width:100%;max-width:320px}
+.book-mock::before{content:'';position:absolute;inset:-32px;background:radial-gradient(ellipse,rgba(200,48,28,0.22) 0%,transparent 68%);pointer-events:none}
+.book-img{width:100%;height:auto;display:block;transform:rotate(-2.5deg);box-shadow:32px 48px 80px rgba(0,0,0,0.7);transition:transform 0.5s ease}
+.book-img:hover{transform:rotate(0deg) scale(1.02)}
+.announce{background:var(--red);color:#fff;text-align:center;padding:13px 24px;font-size:13px;font-weight:500;letter-spacing:0.06em}
+.guarantee{background:var(--blue);color:var(--white);padding:72px 24px}
+.guarantee-inner{max-width:760px;margin:0 auto;display:grid;grid-template-columns:110px 1fr;gap:48px;align-items:center}
+.g-seal{width:110px;height:110px;border-radius:50%;border:2px solid rgba(255,255,255,0.25);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex-shrink:0}
+.g-seal span{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:0.14em;color:var(--gold);line-height:1.5}
+.g-body h3{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(17px,2.2vw,24px);color:var(--white);margin-bottom:14px;line-height:1.4}
+.g-body p{font-size:15px;color:rgba(245,242,236,0.7);line-height:1.85}
+.g-body p strong{color:var(--gold)}
+.letter-section{background:var(--white);padding:96px 24px}
+.letter-inner{max-width:700px;margin:0 auto}
+.section-eyebrow{font-size:12px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);margin-bottom:40px;display:flex;align-items:center;gap:14px}
+.section-eyebrow::after{content:'';flex:1;height:1px;background:var(--warm-gray)}
+.letter-inner p{font-size:17px;line-height:1.9;margin-bottom:22px;color:var(--text-body)}
+.pull-quote{border-left:3px solid var(--red);padding:18px 32px;margin:40px 0;font-family:'DM Serif Display',Georgia,serif;font-size:clamp(22px,3vw,30px);font-style:italic;line-height:1.4;color:var(--blue);background:rgba(26,46,107,0.04)}
+.letter-sig{margin-top:40px;font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:22px;color:var(--text-body)}
+.dark-divider{background:var(--black);color:var(--white);padding:88px 24px;text-align:center}
+.dark-divider-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(38px,6vw,76px);line-height:1;margin-bottom:20px}
+.dark-divider-title em{color:var(--red);font-style:normal}
+.dark-divider p{font-size:17px;color:rgba(245,242,236,0.55);max-width:560px;margin:0 auto;line-height:1.75}
+.inside-section{background:var(--warm-gray);padding:96px 24px}
+.section-wide{max-width:1080px;margin:0 auto}
+.section-heading{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(38px,5.5vw,62px);line-height:0.95;margin-bottom:10px}
+.section-sub{font-size:16px;color:var(--text-muted);margin-bottom:52px;max-width:520px;line-height:1.65}
+.inside-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(296px,1fr));gap:2px}
+.inside-card{background:var(--white);padding:36px 30px;border-top:3px solid transparent;transition:border-color 0.2s}
+.inside-card:hover{border-color:var(--red)}
+.inside-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:52px;color:var(--warm-gray);line-height:1;margin-bottom:10px}
+.inside-title{font-weight:500;font-size:16px;margin-bottom:10px;color:var(--black)}
+.inside-desc{font-size:15px;color:var(--text-muted);line-height:1.7}
+.quote-banner{background:var(--red);color:#fff;padding:88px 24px;text-align:center}
+.quote-banner blockquote{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(22px,3.5vw,40px);line-height:1.35;max-width:820px;margin:0 auto 22px}
+.quote-attr{font-size:12px;opacity:0.65;letter-spacing:0.18em;text-transform:uppercase}
+.diff-section{background:var(--black);padding:80px 24px;text-align:center}
+.diff-line1{font-size:clamp(16px,2vw,20px);color:rgba(245,242,236,0.5);margin-bottom:12px;font-style:italic;font-family:'DM Serif Display',Georgia,serif}
+.diff-line2{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(32px,5vw,58px);color:var(--white);line-height:1}
+.diff-line2 em{color:var(--red);font-style:normal}
+.impact-strip{background:var(--blue);padding:64px 24px}
+.impact-strip-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.impact-item{background:rgba(255,255,255,0.06);padding:36px 28px;text-align:center;border-top:2px solid rgba(200,48,28,0.5)}
+.impact-item-icon{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500}
+.impact-item-text{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(16px,2vw,20px);color:rgba(245,242,236,0.82);line-height:1.5}
+.for-section{background:var(--white);padding:96px 24px}
+.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:52px;max-width:900px}
+.for-col-label{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid currentColor}
+.for-yes .for-col-label{color:var(--red)}
+.for-no .for-col-label{color:var(--mid-gray)}
+.for-list{list-style:none}
+.for-list li{font-size:16px;padding:13px 0;border-bottom:1px solid var(--warm-gray);display:flex;gap:12px;align-items:flex-start;line-height:1.5}
+.for-list li::before{flex-shrink:0;margin-top:2px}
+.for-yes .for-list li::before{content:'✓';color:var(--red);font-weight:500;font-size:14px}
+.for-no .for-list li{color:var(--text-muted)}
+.for-no .for-list li::before{content:'—';color:#ccc;font-size:14px}
+.author-section{background:var(--black);color:var(--white);padding:96px 24px}
+.author-inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:72px;align-items:start}
+.author-photo-wrap{position:relative}
+.author-photo{width:280px;height:340px;object-fit:cover;object-position:top;display:block;border:3px solid rgba(200,48,28,0.4)}
+.author-photo-credit{position:absolute;bottom:-18px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);font-weight:500}
+.author-body .section-heading{color:var(--white);margin-bottom:28px}
+.author-body p{font-size:16px;color:rgba(245,242,236,0.68);line-height:1.85;margin-bottom:20px}
+.author-body p strong{color:var(--white)}
+.author-sig{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:22px;color:var(--gold);margin-top:32px}
+.testimonials-section{background:var(--warm-gray);padding:96px 24px}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;margin-top:52px}
+.t-card{background:var(--white);padding:36px 30px}
+.t-stars{color:var(--gold);font-size:14px;margin-bottom:16px;letter-spacing:2px}
+.t-quote{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:17px;line-height:1.7;color:var(--text-body);margin-bottom:24px}
+.t-quote::before{content:'\201C'}
+.t-quote::after{content:'\201D'}
+.t-name{font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted)}
+.offer-section{background:var(--white);padding:96px 24px;scroll-margin-top:80px}
+.offer-wrap{max-width:640px;margin:0 auto;border:1.5px solid var(--black)}
+.offer-header{background:var(--black);color:var(--white);padding:36px 48px;text-align:center}
+.offer-header p{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px}
+.offer-header-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(36px,5vw,56px);line-height:1}
+.offer-body{padding:40px}
+.offer-tier-price{font-family:'Bebas Neue',Impact,sans-serif;font-size:64px;color:var(--red);line-height:1;margin-bottom:24px;text-align:center}
+.offer-includes{list-style:none;margin-bottom:28px}
+.offer-includes li{font-size:15px;padding:9px 0;border-bottom:1px solid var(--warm-gray);display:flex;gap:10px;align-items:flex-start;color:var(--text-body);line-height:1.5}
+.offer-includes li::before{content:'✓';color:var(--red);font-size:13px;font-weight:500;flex-shrink:0;margin-top:2px}
+.guarantee-nudge{text-align:center;font-size:14px;font-style:italic;color:var(--text-muted);margin-top:20px;padding-top:20px;border-top:1px solid var(--warm-gray)}
+.hurry-section{background:var(--black);color:var(--white);padding:88px 24px;text-align:center}
+.hurry-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(36px,6vw,72px);line-height:1;margin-bottom:28px}
+.hurry-title em{color:var(--red);font-style:normal}
+.hurry-body{font-size:clamp(17px,2vw,21px);color:rgba(245,242,236,0.75);max-width:640px;margin:0 auto 40px;line-height:1.8;font-family:'DM Serif Display',Georgia,serif;font-style:italic}
+.faq-section{background:var(--white);padding:96px 24px}
+.faq-list{max-width:700px;margin:52px auto 0}
+.faq-item{border-bottom:1px solid var(--warm-gray);padding:26px 0}
+.faq-q{font-weight:500;font-size:17px;margin-bottom:10px;color:var(--black)}
+.faq-a{font-size:16px;color:var(--text-muted);line-height:1.78}
+.final-cta{background:var(--red);color:#fff;padding:128px 24px;text-align:center}
+.final-cta-big{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(56px,10vw,112px);line-height:0.92;margin-bottom:28px}
+.final-cta-sub{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(18px,2.5vw,28px);opacity:0.82;margin-bottom:52px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.4}
+footer{background:var(--black);color:rgba(245,242,236,0.35);padding:40px 24px;text-align:center;font-size:13px;line-height:1.8}
+footer a{color:rgba(245,242,236,0.35);text-decoration:none}
+@media(max-width:800px){
+.hero{grid-template-columns:1fr;min-height:auto}
+.hero-left{padding:56px 24px 28px}
+.hero-right{padding:0 24px 56px;justify-content:flex-start}
+.book-mock{max-width:200px}
+.guarantee-inner{grid-template-columns:1fr;gap:28px}
+.g-seal{margin:0 auto}
+.for-grid{grid-template-columns:1fr;gap:40px}
+.author-inner{grid-template-columns:1fr;gap:40px}
+.author-photo{width:100%;max-width:220px;height:auto}
+.impact-strip-inner{grid-template-columns:1fr}
+.offer-body{padding:24px 20px}
+.offer-header{padding:28px 24px}
+.sticky-nav .sticky-nav-text{display:none}
+.hero-title{font-size:clamp(72px,18vw,128px)}
+}
 </style>
 </head>
 <body>
 
-<!-- STICKY NAV -->
 <nav class="sticky-nav" id="stickyNav">
   <div class="sticky-nav-text">
     <strong>Talk's Not Cheap — Jeffrey Epete</strong>
     Book delivered instantly after payment
   </div>
-  <a href="#BUY" class="btn btn-red-sm">Get the Book — ₦5,000</a>
+  <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-red-sm">Get the Book — ₦5,000</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">Jeffrey Epete</div>
-    <h1 class="hero-title">
-      Talk's
-      <em>Not</em>
-      Cheap
-    </h1>
+    <h1 class="hero-title">Talk's<em>Not</em>Cheap</h1>
     <p class="hero-subtitle">Being heard is easy. Being remembered changes your life. This book is about the second one.</p>
     <p class="hero-subtitle-support">Master your voice. Become unforgettable. Command your value.</p>
     <div class="hero-cta-row">
-      <a href="#BUY" class="btn btn-red">Get Instant Access</a>
+      <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-red">Get the Book — ₦5,000</a>
       <p class="hero-price-note">Book delivered immediately &nbsp;·&nbsp; <strong>₦5,000</strong></p>
     </div>
   </div>
   <div class="hero-right">
     <div class="book-mock">
-      <img src="https://i.ibb.co/WW828Xjg/20260325-230228.jpg" alt="Talk's Not Cheap — Jeffrey Epete" class="book-img">
+      <img src="https://i.ibb.co/WW828Xjg/20260325-230228.jpg" alt="Talk's Not Cheap by Jeffrey Epete" class="book-img" width="320" height="420" fetchpriority="high">
     </div>
   </div>
 </section>
 
-<!-- ANNOUNCE -->
 <div class="announce">Book delivered the moment you pay. Start reading in 2 minutes.</div>
 
-<!-- GUARANTEE -->
 <section class="guarantee">
   <div class="guarantee-inner">
     <div class="g-seal"><span>MONEY<br>BACK<br>GUARANTEED</span></div>
@@ -427,7 +201,6 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- OPENING LETTER -->
 <section class="letter-section">
   <div class="letter-inner">
     <div class="section-eyebrow">A word before you decide</div>
@@ -447,13 +220,11 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- DARK DIVIDER -->
 <div class="dark-divider">
   <div class="dark-divider-title">Every time you speak,<br>you're making a <em>trade.</em></div>
   <p>Your audience pays with their time, attention and money. Most speakers collect the applause and leave the real payment on the table.</p>
 </div>
 
-<!-- WHAT'S INSIDE -->
 <section class="inside-section">
   <div class="section-wide">
     <div class="section-heading">What's inside the book</div>
@@ -487,25 +258,22 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
       <div class="inside-card">
         <div class="inside-num">06</div>
         <div class="inside-title">The money conversation</div>
-        <div class="inside-desc">Speaking is one of the few skills that can directly and consistently put money in your pocket. This part shows you exactly how — from setting your fees and negotiating your terms, to building income streams that extend far beyond the stage.</div>
+        <div class="inside-desc">Speaking is one of the few skills that can directly and consistently put money in your pocket. From setting your fees to building income streams far beyond any single stage.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- QUOTE BANNER -->
 <div class="quote-banner">
   <blockquote>"To have the knowledge is intelligence.<br>To be able to effectively express that knowledge is brilliance."</blockquote>
   <div class="quote-attr">Talk's Not Cheap — Jeffrey Epete</div>
 </div>
 
-<!-- DIFFERENTIATOR -->
 <div class="diff-section">
   <div class="diff-line1">Most speaking books tell you to breathe and make eye contact.</div>
   <div class="diff-line2">This one tells you <em>who to be</em> and how to exchange your value.</div>
 </div>
 
-<!-- IMPACT STRIP -->
 <div class="impact-strip">
   <div class="impact-strip-inner">
     <div class="impact-item">
@@ -523,7 +291,6 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
   </div>
 </div>
 
-<!-- WHO IT'S FOR -->
 <section class="for-section">
   <div class="section-wide">
     <div class="section-heading">Is this book for you?</div>
@@ -552,11 +319,10 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- AUTHOR -->
 <section class="author-section">
   <div class="author-inner">
     <div class="author-photo-wrap">
-      <img src="https://i.ibb.co/Kkrjf1W/IMG-20251010-WA0013.jpg" alt="Jeffrey Epete" class="author-photo">
+      <img src="https://i.ibb.co/Kkrjf1W/IMG-20251010-WA0013.jpg" alt="Jeffrey Epete" class="author-photo" width="280" height="340" loading="lazy">
       <div class="author-photo-credit">Jeffrey Epete</div>
     </div>
     <div class="author-body">
@@ -569,7 +335,6 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testimonials-section">
   <div class="section-wide">
     <div class="section-heading">What readers are saying</div>
@@ -593,62 +358,34 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- OFFER -->
 <section class="offer-section" id="BUY">
   <div class="offer-wrap">
     <div class="offer-header">
-      <p>Choose your version</p>
+      <p>One decision. One book. Everything changes.</p>
       <div class="offer-header-title">Get Talk's Not Cheap</div>
     </div>
     <div class="offer-body">
-      <div class="offer-tier">
-        <div class="offer-tier-name">The Book</div>
-        <div class="offer-tier-price">₦5,000</div>
-        <ul class="offer-includes">
-          <li>Talk's Not Cheap — Full book, delivered instantly</li>
-          <li>Discover which of the 3 speaker types you are — and how to move up</li>
-          <li>The framework for commanding value every time you speak</li>
-          <li>The storytelling system that makes your message stick</li>
-          <li>The money conversation — how to set your fees, negotiate your terms, and build income from your voice</li>
-          <li>Invitation to apply for private mentorship inside the book</li>
-        </ul>
-        <a href="https://selar.com/tnc"
-           onclick="fbq('track', 'ViewContent', {content_name: 'TNC Book', value: 5000, currency: 'NGN'})"
-           class="btn btn-black">Get the Book — ₦5,000</a>
-      </div>
-      <div class="offer-tier featured">
-        <div class="offer-badge">Most Value</div>
-        <div class="offer-tier-name">The Complete Bundle</div>
-        <div class="offer-tier-price">₦7,500</div>
-        <ul class="offer-includes">
-          <li>Everything in The Book</li>
-          <li>Speaking Templates — ready-to-use frameworks for any speaking occasion</li>
-          <li>Speaker Contract Template — know your terms before you step on any stage</li>
-          <li>Booking Form Template — look professional from the first inquiry</li>
-          <li>Bio &amp; Profile Template — introduce yourself the way you deserve to be introduced</li>
-          <li>Email Response Templates — respond to enquiries and opportunities like a professional</li>
-          <li>The book tells you what to do. The bundle gives you the tools to do it immediately.</li>
-        </ul>
-        <a href="https://selar.com/tncbundle"
-           onclick="fbq('track', 'ViewContent', {content_name: 'TNC Bundle', value: 7500, currency: 'NGN'})"
-           class="btn btn-black">Get the Bundle — ₦7,500</a>
-      </div>
+      <div class="offer-tier-price">₦5,000</div>
+      <ul class="offer-includes">
+        <li>Talk's Not Cheap — Full book, delivered instantly to your email</li>
+        <li>Discover which of the 3 speaker types you are — and how to move up</li>
+        <li>The framework for commanding value every time you speak</li>
+        <li>The storytelling system that makes your message stick</li>
+        <li>The money conversation — set your fees, negotiate your terms, build income from your voice</li>
+        <li>Invitation to apply for private mentorship inside the book</li>
+      </ul>
+      <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-black">Yes — Get the Book Now</a>
       <div class="guarantee-nudge">Not satisfied? Full refund. In 48 hours. You keep the book.</div>
     </div>
   </div>
 </section>
 
-<!-- HURRY -->
 <section class="hurry-section">
   <div class="hurry-title">You are reading this before<br>we hit <em>1,000 copies.</em></div>
-  <div class="hurry-body">
-    That matters. Because everything changes after that.<br><br>
-    You already know whether this book is for you. The only question left is whether you get it now — or later, at a higher price.
-  </div>
-  <a href="#BUY" class="btn btn-red" style="font-size:16px;padding:20px 56px;">Yes — Get the Book Now at ₦5,000</a>
+  <div class="hurry-body">That matters. Because everything changes after that.<br><br>You already know whether this book is for you. The only question left is whether you get it now — or later, at a higher price.</div>
+  <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-red" style="font-size:16px;padding:20px 56px;">Yes — Get the Book Now at ₦5,000</a>
 </section>
 
-<!-- FAQ -->
 <section class="faq-section">
   <div style="max-width:700px;margin:0 auto;">
     <div class="section-heading">Questions you might have</div>
@@ -666,10 +403,6 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
         <div class="faq-a">Most speaking books tell you to breathe and make eye contact. This one tells you who to be and how to exchange your value. It deals with your identity as a speaker, the psychology behind how you're perceived, and the specific steps to convert your speaking into real income and influence.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What is the bundle and is it worth it?</div>
-        <div class="faq-a">The book tells you what to do. The bundle gives you the tools to do it immediately — templates for your contracts, bookings, speeches, email responses, and professional profile. Everything a working speaker needs, ready to use from day one.</div>
-      </div>
-      <div class="faq-item">
         <div class="faq-q">What is the mentorship mentioned in the book?</div>
         <div class="faq-a">Inside the book, Jeffrey invites readers to apply for a private, selective mentorship collaboration. This is not a mass program. It is a high-touch engagement for those ready to build their speaking career seriously. Details are inside.</div>
       </div>
@@ -681,26 +414,31 @@ src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- FINAL CTA -->
 <section class="final-cta">
   <div class="final-cta-big">Talk isn't cheap.</div>
   <div class="final-cta-sub">Don't make yours one.</div>
-  <a href="#BUY" class="btn btn-white">Get the Book — Start Today</a>
+  <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-white">Get the Book — Start Today</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2024 Jeffrey Epete &nbsp;·&nbsp; <a href="mailto:thejeffreyepete@gmail.com">thejeffreyepete@gmail.com</a> &nbsp;·&nbsp; All rights reserved.</p>
+  <p>© 2025 Jeffrey Epete &nbsp;·&nbsp; <a href="mailto:thejeffreyepete@gmail.com">thejeffreyepete@gmail.com</a> &nbsp;·&nbsp; All rights reserved.</p>
   <p style="margin-top:8px;">Talk's Not Cheap is a book delivered digitally. Individual results depend on effort and application.</p>
 </footer>
 
-<script>
-  // Sticky nav
-  const nav = document.getElementById('stickyNav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('visible', window.scrollY > 500);
-  }, { passive: true });
+<script defer>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.getElementById('stickyNav');
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){
+        nav.classList.toggle('visible',window.scrollY>500);
+        ticking=false;
+      });
+      ticking=true;
+    }
+  },{passive:true});
+});
 </script>
-
 </body>
 </html>
