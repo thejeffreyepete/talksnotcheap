@@ -6,439 +6,1091 @@
 <title>Talk's Not Cheap — Jeffrey Epete</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="https://i.ibb.co/WW828Xjg/20260325-230228.jpg">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1643172083543188');fbq('track','PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1643172083543188&ev=PageView&noscript=1"/></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Instrument+Sans:wght@400;500;600&family=Lora:ital@1&display=swap" rel="stylesheet">
+
 <style>
-:root{--black:#0D0D0D;--white:#F5F2EC;--red:#C8301C;--red-dark:#A02412;--blue:#1A2E6B;--gold:#C9960A;--warm-gray:#E8E4DC;--mid-gray:#B8B3AA;--text-muted:#6B6660;--text-body:#242220}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--text-body);font-family:'DM Sans',Georgia,sans-serif;font-size:18px;line-height:1.75;overflow-x:hidden}
-.sticky-nav{position:fixed;bottom:0;left:0;right:0;background:var(--black);border-top:2px solid var(--red);padding:13px 32px;display:flex;align-items:center;justify-content:space-between;z-index:200;transform:translateY(100%);transition:transform 0.35s cubic-bezier(.4,0,.2,1)}
-.sticky-nav.visible{transform:translateY(0)}
-.sticky-nav-text{font-size:13px;color:rgba(245,242,236,0.6);line-height:1.4}
-.sticky-nav-text strong{color:var(--white);display:block}
-.btn{display:inline-block;font-family:'DM Sans',Georgia,sans-serif;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:background 0.2s,transform 0.15s}
-.btn-red{background:var(--red);color:#fff;padding:18px 44px;font-size:15px}
-.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
-.btn-red-sm{background:var(--red);color:#fff;padding:13px 28px;font-size:13px}
-.btn-red-sm:hover{background:var(--red-dark)}
-.btn-black{background:var(--black);color:var(--white);padding:16px 0;font-size:14px;display:block;width:100%;text-align:center;letter-spacing:0.08em;text-decoration:none;transition:background 0.2s}
-.btn-black:hover{background:var(--red)}
-.btn-white{background:#fff;color:var(--red);padding:20px 56px;font-size:16px}
-.btn-white:hover{transform:translateY(-2px)}
-.hero{background:var(--black);color:var(--white);min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(200,48,28,0.12) 0%,transparent 65%);pointer-events:none}
-.hero-left{display:flex;flex-direction:column;justify-content:center;padding:80px 56px 80px 80px;position:relative;z-index:2}
-.hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:28px;display:flex;align-items:center;gap:14px}
-.hero-eyebrow::before{content:'';width:36px;height:1.5px;background:var(--red);flex-shrink:0}
-.hero-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(80px,11vw,128px);line-height:0.88;letter-spacing:0.01em;margin-bottom:36px}
-.hero-title em{display:block;color:var(--red);font-style:normal}
-.hero-subtitle{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(17px,2.2vw,22px);font-style:italic;color:rgba(245,242,236,0.78);line-height:1.55;margin-bottom:12px;max-width:460px}
-.hero-subtitle-support{font-size:14px;color:rgba(245,242,236,0.42);margin-bottom:32px;max-width:420px;line-height:1.65;font-style:italic}
-.hero-cta-row{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
-.hero-price-note{font-size:13px;color:rgba(245,242,236,0.4)}
-.hero-price-note strong{color:var(--gold);font-size:17px;font-weight:500}
-.hero-right{display:flex;align-items:center;justify-content:center;padding:60px 80px 60px 20px;position:relative;z-index:2}
-.book-mock{position:relative;width:100%;max-width:320px}
-.book-mock::before{content:'';position:absolute;inset:-32px;background:radial-gradient(ellipse,rgba(200,48,28,0.22) 0%,transparent 68%);pointer-events:none}
-.book-img{width:100%;height:auto;display:block;transform:rotate(-2.5deg);box-shadow:32px 48px 80px rgba(0,0,0,0.7);transition:transform 0.5s ease}
-.book-img:hover{transform:rotate(0deg) scale(1.02)}
-.announce{background:var(--red);color:#fff;text-align:center;padding:13px 24px;font-size:13px;font-weight:500;letter-spacing:0.06em}
-.guarantee{background:var(--blue);color:var(--white);padding:72px 24px}
-.guarantee-inner{max-width:760px;margin:0 auto;display:grid;grid-template-columns:110px 1fr;gap:48px;align-items:center}
-.g-seal{width:110px;height:110px;border-radius:50%;border:2px solid rgba(255,255,255,0.25);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex-shrink:0}
-.g-seal span{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:0.14em;color:var(--gold);line-height:1.5}
-.g-body h3{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(17px,2.2vw,24px);color:var(--white);margin-bottom:14px;line-height:1.4}
-.g-body p{font-size:15px;color:rgba(245,242,236,0.7);line-height:1.85}
-.g-body p strong{color:var(--gold)}
-.letter-section{background:var(--white);padding:96px 24px}
-.letter-inner{max-width:700px;margin:0 auto}
-.section-eyebrow{font-size:12px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);margin-bottom:40px;display:flex;align-items:center;gap:14px}
-.section-eyebrow::after{content:'';flex:1;height:1px;background:var(--warm-gray)}
-.letter-inner p{font-size:17px;line-height:1.9;margin-bottom:22px;color:var(--text-body)}
-.pull-quote{border-left:3px solid var(--red);padding:18px 32px;margin:40px 0;font-family:'DM Serif Display',Georgia,serif;font-size:clamp(22px,3vw,30px);font-style:italic;line-height:1.4;color:var(--blue);background:rgba(26,46,107,0.04)}
-.letter-sig{margin-top:40px;font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:22px;color:var(--text-body)}
-.dark-divider{background:var(--black);color:var(--white);padding:88px 24px;text-align:center}
-.dark-divider-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(38px,6vw,76px);line-height:1;margin-bottom:20px}
-.dark-divider-title em{color:var(--red);font-style:normal}
-.dark-divider p{font-size:17px;color:rgba(245,242,236,0.55);max-width:560px;margin:0 auto;line-height:1.75}
-.inside-section{background:var(--warm-gray);padding:96px 24px}
-.section-wide{max-width:1080px;margin:0 auto}
-.section-heading{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(38px,5.5vw,62px);line-height:0.95;margin-bottom:10px}
-.section-sub{font-size:16px;color:var(--text-muted);margin-bottom:52px;max-width:520px;line-height:1.65}
-.inside-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(296px,1fr));gap:2px}
-.inside-card{background:var(--white);padding:36px 30px;border-top:3px solid transparent;transition:border-color 0.2s}
-.inside-card:hover{border-color:var(--red)}
-.inside-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:52px;color:var(--warm-gray);line-height:1;margin-bottom:10px}
-.inside-title{font-weight:500;font-size:16px;margin-bottom:10px;color:var(--black)}
-.inside-desc{font-size:15px;color:var(--text-muted);line-height:1.7}
-.quote-banner{background:var(--red);color:#fff;padding:88px 24px;text-align:center}
-.quote-banner blockquote{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(22px,3.5vw,40px);line-height:1.35;max-width:820px;margin:0 auto 22px}
-.quote-attr{font-size:12px;opacity:0.65;letter-spacing:0.18em;text-transform:uppercase}
-.diff-section{background:var(--black);padding:80px 24px;text-align:center}
-.diff-line1{font-size:clamp(16px,2vw,20px);color:rgba(245,242,236,0.5);margin-bottom:12px;font-style:italic;font-family:'DM Serif Display',Georgia,serif}
-.diff-line2{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(32px,5vw,58px);color:var(--white);line-height:1}
-.diff-line2 em{color:var(--red);font-style:normal}
-.impact-strip{background:var(--blue);padding:64px 24px}
-.impact-strip-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.impact-item{background:rgba(255,255,255,0.06);padding:36px 28px;text-align:center;border-top:2px solid rgba(200,48,28,0.5)}
-.impact-item-icon{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500}
-.impact-item-text{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(16px,2vw,20px);color:rgba(245,242,236,0.82);line-height:1.5}
-.for-section{background:var(--white);padding:96px 24px}
-.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:52px;max-width:900px}
-.for-col-label{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid currentColor}
-.for-yes .for-col-label{color:var(--red)}
-.for-no .for-col-label{color:var(--mid-gray)}
-.for-list{list-style:none}
-.for-list li{font-size:16px;padding:13px 0;border-bottom:1px solid var(--warm-gray);display:flex;gap:12px;align-items:flex-start;line-height:1.5}
-.for-list li::before{flex-shrink:0;margin-top:2px}
-.for-yes .for-list li::before{content:'✓';color:var(--red);font-weight:500;font-size:14px}
-.for-no .for-list li{color:var(--text-muted)}
-.for-no .for-list li::before{content:'—';color:#ccc;font-size:14px}
-.author-section{background:var(--black);color:var(--white);padding:96px 24px}
-.author-inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:72px;align-items:start}
-.author-photo-wrap{position:relative}
-.author-photo{width:280px;height:340px;object-fit:cover;object-position:top;display:block;border:3px solid rgba(200,48,28,0.4)}
-.author-photo-credit{position:absolute;bottom:-18px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);font-weight:500}
-.author-body .section-heading{color:var(--white);margin-bottom:28px}
-.author-body p{font-size:16px;color:rgba(245,242,236,0.68);line-height:1.85;margin-bottom:20px}
-.author-body p strong{color:var(--white)}
-.author-sig{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:22px;color:var(--gold);margin-top:32px}
-.testimonials-section{background:var(--warm-gray);padding:96px 24px}
-.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;margin-top:52px}
-.t-card{background:var(--white);padding:36px 30px}
-.t-stars{color:var(--gold);font-size:14px;margin-bottom:16px;letter-spacing:2px}
-.t-quote{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:17px;line-height:1.7;color:var(--text-body);margin-bottom:24px}
-.t-quote::before{content:'\201C'}
-.t-quote::after{content:'\201D'}
-.t-name{font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted)}
-.offer-section{background:var(--white);padding:96px 24px;scroll-margin-top:80px}
-.offer-wrap{max-width:640px;margin:0 auto;border:1.5px solid var(--black)}
-.offer-header{background:var(--black);color:var(--white);padding:36px 48px;text-align:center}
-.offer-header p{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px}
-.offer-header-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(36px,5vw,56px);line-height:1}
-.offer-body{padding:40px}
-.offer-tier-price{font-family:'Bebas Neue',Impact,sans-serif;font-size:64px;color:var(--red);line-height:1;margin-bottom:24px;text-align:center}
-.offer-includes{list-style:none;margin-bottom:28px}
-.offer-includes li{font-size:15px;padding:9px 0;border-bottom:1px solid var(--warm-gray);display:flex;gap:10px;align-items:flex-start;color:var(--text-body);line-height:1.5}
-.offer-includes li::before{content:'✓';color:var(--red);font-size:13px;font-weight:500;flex-shrink:0;margin-top:2px}
-.guarantee-nudge{text-align:center;font-size:14px;font-style:italic;color:var(--text-muted);margin-top:20px;padding-top:20px;border-top:1px solid var(--warm-gray)}
-.hurry-section{background:var(--black);color:var(--white);padding:88px 24px;text-align:center}
-.hurry-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(36px,6vw,72px);line-height:1;margin-bottom:28px}
-.hurry-title em{color:var(--red);font-style:normal}
-.hurry-body{font-size:clamp(17px,2vw,21px);color:rgba(245,242,236,0.75);max-width:640px;margin:0 auto 40px;line-height:1.8;font-family:'DM Serif Display',Georgia,serif;font-style:italic}
-.faq-section{background:var(--white);padding:96px 24px}
-.faq-list{max-width:700px;margin:52px auto 0}
-.faq-item{border-bottom:1px solid var(--warm-gray);padding:26px 0}
-.faq-q{font-weight:500;font-size:17px;margin-bottom:10px;color:var(--black)}
-.faq-a{font-size:16px;color:var(--text-muted);line-height:1.78}
-.final-cta{background:var(--red);color:#fff;padding:128px 24px;text-align:center}
-.final-cta-big{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(56px,10vw,112px);line-height:0.92;margin-bottom:28px}
-.final-cta-sub{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(18px,2.5vw,28px);opacity:0.82;margin-bottom:52px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.4}
-footer{background:var(--black);color:rgba(245,242,236,0.35);padding:40px 24px;text-align:center;font-size:13px;line-height:1.8}
-footer a{color:rgba(245,242,236,0.35);text-decoration:none}
-@media(max-width:800px){
-.hero{grid-template-columns:1fr;min-height:auto}
-.hero-left{padding:56px 24px 28px}
-.hero-right{padding:0 24px 56px;justify-content:flex-start}
-.book-mock{max-width:200px}
-.guarantee-inner{grid-template-columns:1fr;gap:28px}
-.g-seal{margin:0 auto}
-.for-grid{grid-template-columns:1fr;gap:40px}
-.author-inner{grid-template-columns:1fr;gap:40px}
-.author-photo{width:100%;max-width:220px;height:auto}
-.impact-strip-inner{grid-template-columns:1fr}
-.offer-body{padding:24px 20px}
-.offer-header{padding:28px 24px}
-.sticky-nav .sticky-nav-text{display:none}
-.hero-title{font-size:clamp(72px,18vw,128px)}
+
+:root {
+  --red: #CC0000;
+  --red-dark: #a30000;
+  --red-light: #fff0f0;
+  --blue: #0057A8;
+  --blue-light: #e8f0fa;
+  --ink: #0f0d0c;
+  --paper: #faf8f5;
+  --warm: #f3f0ea;
+  --gold: #B8860B;
+  --gold-light: #fdf8e8;
+  --muted: #6b6158;
+  --divider: #e0dbd2;
+  --white: #ffffff;
+  --max: 780px;
 }
+
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* TOPBAR */
+.topbar {
+  background: var(--ink);
+  color: rgba(255,255,255,0.75);
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+.topbar .guarantee {
+  color: #FFD700;
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(255,215,0,0.4);
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin-left: 6px;
+}
+
+/* HERO */
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 24px 0;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(40px, 8.5vw, 74px);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.hero h1 .blue {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.hero-sub {
+  font-size: clamp(17px, 2.8vw, 20px);
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 20px;
+  line-height: 1.65;
+}
+
+.hero-sub strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.hero-sub em {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+}
+
+/* BOOK IMAGE */
+.book-wrap {
+  margin: 48px auto 0;
+  max-width: var(--max);
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.book-wrap img {
+  width: 200px;
+  border-radius: 3px;
+  box-shadow: 0 24px 64px rgba(15,13,12,0.22), 0 6px 20px rgba(15,13,12,0.12);
+}
+
+/* DIVIDER */
+hr.div {
+  border: none;
+  border-top: 1px solid var(--divider);
+  max-width: var(--max);
+  margin: 64px auto;
+}
+
+/* SECTION */
+.sec {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* SECTION HEADING */
+.sh {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(26px, 4.5vw, 38px);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.sh-meta {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.sh-sub {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+/* PULL QUOTE */
+.pq {
+  border-left: 3px solid var(--red);
+  background: var(--red-light);
+  padding: 22px 28px;
+  margin: 32px 0;
+  border-radius: 0 4px 4px 0;
+}
+.pq p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(18px, 2.8vw, 22px);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* LETTER */
+.letter p {
+  color: #2a2520;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.letter-sig {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 21px;
+  color: var(--red);
+  margin-top: 36px;
+}
+
+/* BEFORE / AFTER */
+.ba-grid {
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr;
+  gap: 0;
+  margin-top: 8px;
+}
+
+.ba-col { display: flex; flex-direction: column; gap: 10px; }
+
+.ba-before {
+  background: var(--white);
+  border: 1px solid var(--divider);
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.ba-before::before {
+  content: '✗';
+  color: #c9a8a0;
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+.ba-after {
+  background: var(--blue-light);
+  border: 1px solid #b8cfe8;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #0a2a4a;
+  line-height: 1.5;
+}
+
+.ba-after::before {
+  content: '→';
+  color: var(--blue);
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+.ba-arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.ba-arrows span {
+  font-size: 16px;
+  color: var(--red);
+  line-height: 52px;
+}
+
+/* CONTENTS */
+.contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--divider);
+  border: 1px solid var(--divider);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+@media(max-width:520px){.contents{grid-template-columns:1fr}}
+
+.c-item {
+  background: var(--white);
+  padding: 24px 22px;
+}
+
+.c-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--divider);
+  display: block;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.c-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.c-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+.c-outcome {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--blue);
+  margin-top: 10px;
+  display: block;
+}
+
+/* FOR WHO */
+.fw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media(max-width:540px){.fw-grid{grid-template-columns:1fr}}
+
+.fw-box { border-radius: 4px; padding: 28px 24px; }
+.fw-box.yes { background: var(--gold-light); border: 1px solid #e0ceaa; }
+.fw-box.no  { background: var(--white); border: 1px solid var(--divider); }
+
+.fw-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+.fw-box.yes .fw-label { color: var(--gold); }
+
+.fw-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+.fw-list li {
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 22px;
+  position: relative;
+  color: #2a2520;
+}
+
+.fw-box.yes .fw-list li::before { content:'✓'; position:absolute; left:0; color:var(--gold); font-weight:700; }
+.fw-box.no  .fw-list li::before { content:'✗'; position:absolute; left:0; color:#c0b8b0; }
+
+/* TESTIMONIALS */
+.testis { display: flex; flex-direction: column; gap: 18px; }
+
+.testi {
+  background: var(--white);
+  border: 1px solid var(--divider);
+  border-radius: 4px;
+  padding: 26px 28px;
+}
+
+.testi-stars { color: var(--gold); font-size: 15px; margin-bottom: 12px; }
+.testi-text  { font-size: 16px; line-height: 1.68; color: #2a2520; margin-bottom: 14px; }
+.testi-name  { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* AUTHOR */
+.author {
+  background: var(--warm);
+  border-radius: 6px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+@media(max-width:480px){.author{grid-template-columns:1fr;padding:28px 24px}}
+
+.author img {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid var(--white);
+}
+
+.author-name { font-family:'Playfair Display',Georgia,serif; font-size:20px; font-weight:700; margin-bottom:4px; }
+.author-role { font-size:13px; color:var(--muted); margin-bottom:16px; }
+.author-bio  { font-size:15px; line-height:1.72; color:#2a2520; }
+.author-bio + .author-bio { margin-top:12px; }
+
+/* FORM / OFFER */
+.offer {
+  background: var(--ink);
+  border-radius: 8px;
+  padding: 52px 48px;
+  text-align: center;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+@media(max-width:560px){.offer{padding:36px 24px}}
+
+.offer-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 16px;
+}
+
+.offer-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.offer-price {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  margin: 20px 0 4px;
+}
+
+.offer-price-note {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 32px;
+}
+
+.offer-list {
+  list-style: none;
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto 40px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.offer-list li {
+  font-size: 15px;
+  padding: 9px 0 9px 26px;
+  position: relative;
+  color: rgba(255,255,255,0.82);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.offer-list li:last-child { border-bottom: none; }
+.offer-list li::before { content:'→'; position:absolute; left:0; color:#FFD700; }
+
+/* FORM */
+.checkout-form {
+  max-width: 460px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-form input {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 4px;
+  color: var(--white);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 15px;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color 0.18s;
+}
+
+.checkout-form input::placeholder { color: rgba(255,255,255,0.35); }
+.checkout-form input:focus { border-color: rgba(255,255,255,0.5); }
+
+.btn-red {
+  display: block;
+  width: 100%;
+  background: var(--red);
+  color: var(--white);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 18px 32px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.18s, transform 0.1s;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 4px;
+}
+.btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
+.btn-red:active { transform: translateY(0); }
+
+.form-note {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  margin-top: 10px;
+}
+
+/* GUARANTEE BAR */
+.guarantee-bar {
+  background: var(--warm);
+  border: 1px solid var(--divider);
+  border-radius: 4px;
+  padding: 22px 28px;
+  margin-top: 20px;
+  text-align: center;
+}
+.guarantee-bar p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+.guarantee-bar strong { color: var(--ink); font-weight: 600; }
+
+/* FAQ */
+.faq { border: 1px solid var(--divider); border-radius: 6px; overflow: hidden; }
+
+details {
+  border-bottom: 1px solid var(--divider);
+  background: var(--white);
+}
+details:last-child { border-bottom: none; }
+
+summary {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px 24px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink);
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--muted);
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: transform 0.2s;
+}
+details[open] summary::after { transform: rotate(45deg); }
+
+details div {
+  padding: 0 24px 22px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* CLOSING */
+.closing {
+  background: var(--ink);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.closing h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 6vw, 52px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.18;
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+
+.closing-body {
+  font-size: clamp(16px, 2.5vw, 18px);
+  color: rgba(255,255,255,0.72);
+  max-width: 520px;
+  margin: 0 auto 16px;
+  line-height: 1.7;
+}
+
+.closing-price {
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 36px;
+}
+
+.closing-price strong { color: rgba(255,255,255,0.75); }
+
+.closing .btn-red {
+  display: inline-block;
+  width: auto;
+  padding: 18px 52px;
+  font-size: 17px;
+}
+
+.closing-sub {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  margin-top: 16px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--divider);
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 13px;
+  color: var(--muted);
+}
+footer a { color: var(--muted); }
+
+/* SECTION BAND BACKGROUNDS */
+.band {
+  width: 100%;
+  padding: 72px 0;
+}
+.band-paper  { background: var(--paper); }
+.band-warm   { background: var(--warm); }
+.band-dark   { background: var(--ink); }
+.band-white  { background: var(--white); }
+
+.band-dark .sh        { color: var(--white); }
+.band-dark .sh-meta   { color: rgba(255,255,255,0.45); }
+.band-dark .sh-sub    { color: rgba(255,255,255,0.55); }
+.band-dark .ba-before { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.55); }
+.band-dark .ba-after  { background: rgba(0,87,168,0.25); border-color: rgba(0,87,168,0.4); color: #a8cef0; }
+.band-dark hr.div     { border-color: rgba(255,255,255,0.08); }
+
+/* remove old hr dividers between bands — spacing handled by band padding */
+.band + .band { margin-top: 0; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.hero h1      { animation: fadeUp 0.5s ease both; }
+.hero-sub     { animation: fadeUp 0.5s ease 0.08s both; }
+
+/* STICKY CTA */
+.sticky {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--ink);
+  padding: 12px 20px;
+  z-index: 100;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+@media(max-width:640px){
+  .sticky { display: flex; }
+  body { padding-bottom: 68px; }
+}
+.sticky span { font-size: 14px; color: rgba(255,255,255,0.7); }
+.sticky .btn-red { width: auto; font-size: 14px; padding: 11px 22px; margin-top: 0; }
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: #1a3a1a;
+  color: #a8e6a8;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 200;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* PROCESSING STATE */
+.btn-red.loading { opacity: 0.7; pointer-events: none; }
+
 </style>
 </head>
 <body>
 
-<nav class="sticky-nav" id="stickyNav">
-  <div class="sticky-nav-text">
-    <strong>Talk's Not Cheap — Jeffrey Epete</strong>
-    Book delivered instantly after payment
-  </div>
-  <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-red-sm">Get the Book — ₦5,000</a>
-</nav>
-
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Jeffrey Epete</div>
-    <h1 class="hero-title">Talk's<em>Not</em>Cheap</h1>
-    <p class="hero-subtitle">Being heard is easy. Being remembered changes your life. This book is about the second one.</p>
-    <p class="hero-subtitle-support">Master your voice. Become unforgettable. Command your value.</p>
-    <div class="hero-cta-row">
-      <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-red">Get the Book — ₦5,000</a>
-      <p class="hero-price-note">Book delivered immediately &nbsp;·&nbsp; <strong>₦5,000</strong></p>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="book-mock">
-      <img src="https://i.ibb.co/WW828Xjg/20260325-230228.jpg" alt="Talk's Not Cheap by Jeffrey Epete" class="book-img" width="320" height="420" fetchpriority="high">
-    </div>
-  </div>
-</section>
-
-<div class="announce">Book delivered the moment you pay. Start reading in 2 minutes.</div>
-
-<section class="guarantee">
-  <div class="guarantee-inner">
-    <div class="g-seal"><span>MONEY<br>BACK<br>GUARANTEED</span></div>
-    <div class="g-body">
-      <h3>Read it. If you think it is not worth it, you get your money back within 48 hours of purchase.</h3>
-      <p>Read the book. Apply what you find. If you are not satisfied, I will return your money the same day. And I will ask you to <strong>keep the book</strong> as compensation for your time. I have put what you won't find in many masterclasses into these pages.</p>
-    </div>
-  </div>
-</section>
-
-<section class="letter-section">
-  <div class="letter-inner">
-    <div class="section-eyebrow">A word before you decide</div>
-    <p><strong>Dear Friend,</strong></p>
-    <p>Let me ask you something honest.</p>
-    <p>You can speak. Maybe you speak regularly — at events, in meetings, on social media, in front of clients. People listen. Some even applaud.</p>
-    <div class="pull-quote">Is the money coming?</div>
-    <p>And I don't only mean the fee on a cheque. I mean — are your words landing? Are they changing anything? Are people walking away from your presentations different from how they came in? Because the gap between speaking and truly communicating is where most people silently live — and most never find their way out.</p>
-    <p>I know this gap because I lived in it.</p>
-    <p>I started public speaking at twelve years old — church convention, sweaty palms, a notebook full of points I finished reading in five minutes when I had fifteen. The applause I got that day was the kind that says <em>"you'll do better, boy."</em></p>
-    <p>Several years later, the same voice that embarrassed me in that church hall has taken me to stages across Nigeria — and people now take notes even during casual conversations. That last sentence is not a flex. It is what this book can do for you.</p>
-    <p><strong>The difference between who I was and who I became is not talent. It is not confidence. It is not even "just practice".</strong></p>
-    <p>It is a set of principles — about identity, about structure, about how a voice becomes a force — that I have now put into one book.</p>
-    <p>That book is called <strong>Talk's Not Cheap</strong>. And I believe it will change how you see yourself every time you open your mouth — and what happens in every room because of it.</p>
-    <p>Read on.</p>
-    <div class="letter-sig">— Jeffrey Epete</div>
-  </div>
-</section>
-
-<div class="dark-divider">
-  <div class="dark-divider-title">Every time you speak,<br>you're making a <em>trade.</em></div>
-  <p>Your audience pays with their time, attention and money. Most speakers collect the applause and leave the real payment on the table.</p>
+<!-- TOPBAR -->
+<div class="topbar">
+  Book delivered to you immediately.
+  <span class="guarantee">48-HOUR MONEY-BACK GUARANTEE</span>
 </div>
 
-<section class="inside-section">
-  <div class="section-wide">
-    <div class="section-heading">What's inside the book</div>
-    <p class="section-sub">Six parts. Every insight pulled from real experience on real stages.</p>
-    <div class="inside-grid">
-      <div class="inside-card">
-        <div class="inside-num">01</div>
-        <div class="inside-title">Why speaking is more than talking</div>
-        <div class="inside-desc">Speaking is not a soft skill. It is the highest-leverage tool you own — for income, influence, and impact.</div>
-      </div>
-      <div class="inside-card">
-        <div class="inside-num">02</div>
-        <div class="inside-title">How to see yourself as a speaker</div>
-        <div class="inside-desc">You are a sculptor. An artist. A trader. A builder. This section changes who you are before you say a single word.</div>
-      </div>
-      <div class="inside-card">
-        <div class="inside-num">03</div>
-        <div class="inside-title">The power of storytelling</div>
-        <div class="inside-desc">Data informs. Stories transform. Learn the difference — and use it every time you speak.</div>
-      </div>
-      <div class="inside-card">
-        <div class="inside-num">04</div>
-        <div class="inside-title">Preparing and delivering a killer speech</div>
-        <div class="inside-desc">The structure of a speech people remember. How to open, build, close — and own the room from the first sentence.</div>
-      </div>
-      <div class="inside-card">
-        <div class="inside-num">05</div>
-        <div class="inside-title">Commanding value beyond money</div>
-        <div class="inside-desc">How to position yourself, negotiate your terms, and turn every speaking engagement into a door that opens the next one.</div>
-      </div>
-      <div class="inside-card">
-        <div class="inside-num">06</div>
-        <div class="inside-title">The money conversation</div>
-        <div class="inside-desc">Speaking is one of the few skills that can directly and consistently put money in your pocket. From setting your fees to building income streams far beyond any single stage.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- HERO -->
+<header class="hero">
+  <span class="hero-eyebrow">A book for you who know that your voice is power</span>
 
-<div class="quote-banner">
-  <blockquote>"To have the knowledge is intelligence.<br>To be able to effectively express that knowledge is brilliance."</blockquote>
-  <div class="quote-attr">Talk's Not Cheap — Jeffrey Epete</div>
+  <h1>You already speak.<br>Now <span class="blue">speak</span> so<br><em style="color:var(--red);font-style:italic">they can't forget you.</em></h1>
+
+  <p class="hero-sub">
+    Talk's Not Cheap is a complete system for how you think, carry, and command yourself every time you open your mouth, on a stage, in a boardroom, in a pitch, or in a conversation that could change your life.
+  </p>
+</header>
+
+<!-- BOOK IMAGE -->
+<div class="book-wrap">
+  <img src="https://i.ibb.co/WW828Xjg/20260325-230228.jpg" alt="Talk's Not Cheap by Jeffrey Epete">
 </div>
 
-<div class="diff-section">
-  <div class="diff-line1">Most speaking books tell you to breathe and make eye contact.</div>
-  <div class="diff-line2">This one tells you <em>who to be</em> and how to exchange your value.</div>
+<hr class="div">
+
+<!-- LETTER -->
+<div class="band band-warm">
+<section class="sec letter">
+  <span class="sh-meta">A word if you haven't decided</span>
+  <h2 class="sh">You speak. But does it deliver?</h2>
+
+  <div style="height:32px"></div>
+
+  <p>
+    You either want to start speaking, or you're already doing it somewhere. At events, in meetings, on social media, in front of clients, a congregation, a classroom.
+  </p>
+
+  <p>
+    People listen. Some even applaud. But when it's over, something honest nags at you. Did it hit? Did anything actually change in there? Did they hear me, or did they just hear words?
+  </p>
+
+  <p>
+    That feeling is not impostor syndrome. It is information. It means you already know there is a gap between speaking and truly communicating, and you haven't found the system to close it yet.
+  </p>
+
+  <div class="pq">
+    <p>"To have the knowledge is intelligence. To be able to effectively express that knowledge is brilliance. And brilliance, consistently expressed, is what builds a platform."</p>
+  </div>
+
+  <p>
+    I know this gap because I lived in it. I started at twelve, church convention, sweaty palms, a notebook full of points I burned through in five minutes when I had fifteen. 😂 The applause I received that day was the kind that politely says, <em style="font-family:'Lora',serif">you'll do better, boy.</em>
+  </p>
+
+  <p>
+    I have since spoken on different stages across Nigeria. Coached professionals to find their voice. Shared platforms with some of the world's finest communicators. Today, people take notes during my casual conversations. That is not an accident.
+  </p>
+
+  <p>
+    The difference between who I was and who I became is not just talent. Not just confidence. Not even practice alone.
+  </p>
+
+  <p>
+    It is a system. A set of principles about identity, about structure, about how a voice becomes a force. Everything I know, pulled from real stages and failure experience. That system is this book, at a price that removes every excuse.
+  </p>
+
+  <p class="letter-sig">— Jeffrey Epete</p>
+</section>
 </div>
 
-<div class="impact-strip">
-  <div class="impact-strip-inner">
-    <div class="impact-item">
-      <div class="impact-item-icon">Identity</div>
-      <div class="impact-item-text">Change who you are before you say a word</div>
+<!-- TRANSFORMATION -->
+<div class="band band-dark">
+<section class="sec" id="transformation">
+  <span class="sh-meta">What this book actually changes</span>
+  <h2 class="sh">From the speaker you are<br>to the one they remember</h2>
+  <p class="sh-sub" style="margin-top:10px">These aren't tips. This is who you become.</p>
+
+  <div class="ba-grid">
+    <div class="ba-col">
+      <div class="ba-before">You finish talking and wonder if any of it hit</div>
+      <div class="ba-before">You know your content but can't hold the space</div>
+      <div class="ba-before">You get applause but not the opportunities</div>
+      <div class="ba-before">You speak from knowledge, not from identity</div>
+      <div class="ba-before">You're waiting to be discovered or called upon</div>
     </div>
-    <div class="impact-item">
-      <div class="impact-item-icon">Influence</div>
-      <div class="impact-item-text">Move people — not just inform them</div>
+
+    <div class="ba-arrows" aria-hidden="true">
+      <span>→</span><span>→</span><span>→</span><span>→</span><span>→</span>
     </div>
-    <div class="impact-item">
-      <div class="impact-item-icon">Income</div>
-      <div class="impact-item-text">Convert your voice into real, tangible value</div>
+
+    <div class="ba-col">
+      <div class="ba-after">People approach you after, something shifted in them</div>
+      <div class="ba-after">You own every conversation before the second sentence</div>
+      <div class="ba-after">Talking opens doors your CV couldn't reach</div>
+      <div class="ba-after">You show up as a sculptor, artist, builder, storyteller</div>
+      <div class="ba-after">You build your own platform and stop asking for permission</div>
     </div>
   </div>
+</section>
 </div>
 
-<section class="for-section">
-  <div class="section-wide">
-    <div class="section-heading">Is this book for you?</div>
-    <p class="section-sub">Be honest with yourself. This book is not for everyone — and that is not a bad thing.</p>
-    <div class="for-grid">
-      <div class="for-yes">
-        <div class="for-col-label">This is for you if...</div>
-        <ul class="for-list">
-          <li>You speak regularly but aren't converting your visibility into income or influence</li>
-          <li>You get applause but not the opportunities you deserve</li>
-          <li>You want to be taken more seriously every time you open your mouth</li>
-          <li>You are a coach, trainer, consultant, pastor, or entrepreneur who leads with their voice</li>
-          <li>Your words should be doing more — and you know it</li>
-        </ul>
-      </div>
-      <div class="for-no">
-        <div class="for-col-label">This is NOT for you if...</div>
-        <ul class="for-list">
-          <li>You want a magic trick that requires zero effort</li>
-          <li>You're not willing to apply what you read</li>
-          <li>You think confidence alone is enough to command value</li>
-          <li>You're looking for a script to memorize, not a craft to develop</li>
-        </ul>
-      </div>
+<!-- WHAT'S INSIDE -->
+<div class="band band-white">
+<section class="sec">
+  <span class="sh-meta">Inside the book</span>
+  <h2 class="sh">Six parts. Every insight and illustration pulled<br>from practical experiences on real stages.</h2>
+  <div style="height:28px"></div>
+
+  <div class="contents">
+    <div class="c-item">
+      <span class="c-num">01</span>
+      <p class="c-title">The power of talking</p>
+      <p class="c-desc">The highest-leverage skill you own — for influence, opportunity, and impact. This section shows you why, with evidence from stages, boardrooms, and movements.</p>
+      <span class="c-outcome">You'll never call this a "soft skill" again.</span>
+    </div>
+    <div class="c-item">
+      <span class="c-num">02</span>
+      <p class="c-title">Who you are as a speaker</p>
+      <p class="c-desc">Before technique, there is you. The sculptor. The artist. The physician. The builder. This part reshapes how you see yourself and raises the ceiling of everything else.</p>
+      <span class="c-outcome">You'll walk differently into every conversation after this.</span>
+    </div>
+    <div class="c-item">
+      <span class="c-num">03</span>
+      <p class="c-title">The power of storytelling</p>
+      <p class="c-desc">Data informs. Stories transform. This goes deeper than mechanics, into why stories work, how vulnerability makes them stick, and how to turn your life into your audience's most valuable lesson.</p>
+      <span class="c-outcome">You'll start seeing stories in everything.</span>
+    </div>
+    <div class="c-item">
+      <span class="c-num">04</span>
+      <p class="c-title">Preparing a killer speech everyone remembers</p>
+      <p class="c-desc">The full architecture. How to open, build, close — and own the space from the first sentence, with tested and proven technique.</p>
+      <span class="c-outcome">You'll never walk in unprepared again.</span>
+    </div>
+    <div class="c-item">
+      <span class="c-num">05</span>
+      <p class="c-title">Commanding your value</p>
+      <p class="c-desc">Positioning yourself. Negotiating your terms. Turning every engagement into a door that opens the next one. Including the uncomfortable conversation about what you actually deserve.</p>
+      <span class="c-outcome">You'll stop underpricing yourself.</span>
+    </div>
+    <div class="c-item">
+      <span class="c-num">06</span>
+      <p class="c-title">The business of your voice</p>
+      <p class="c-desc">Your map of the Nigerian speaking market. The three traps keeping speakers broke. How to build an ecosystem (coaching, digital products, events, writing) around the voice you're developing.</p>
+      <span class="c-outcome">You'll see income streams you didn't know existed.</span>
     </div>
   </div>
 </section>
+</div>
 
-<section class="author-section">
-  <div class="author-inner">
-    <div class="author-photo-wrap">
-      <img src="https://i.ibb.co/Kkrjf1W/IMG-20251010-WA0013.jpg" alt="Jeffrey Epete" class="author-photo" width="280" height="340" loading="lazy">
-      <div class="author-photo-credit">Jeffrey Epete</div>
-    </div>
-    <div class="author-body">
-      <div class="section-heading">About the author</div>
-      <p>I have spent years on stages, in boardrooms, at conferences, and in coaching sessions across Nigeria. I have watched people with extraordinary ideas be ignored — and people with ordinary ideas command rooms — and I have studied exactly why.</p>
-      <p><strong>I am not a professor. I am a practitioner.</strong> I have coached professionals to find their voice and use it with intention. I have shared stages with some of the world's best communicators. And today, people take notes even during casual conversations. That is not an accident. It is the result of everything inside this book.</p>
-      <p>I wrote Talk's Not Cheap because there is a framework behind every speaker who commands a room — and it can be learned. I wanted to put everything I know into one place, at a price that removes every excuse.</p>
-      <div class="author-sig">Jeffrey Epete</div>
-    </div>
-  </div>
-</section>
+<!-- FOR WHO -->
+<div class="band band-warm">
+<section class="sec">
+  <span class="sh-meta">Is this for you</span>
+  <h2 class="sh">Be honest with yourself.<br>This is not for everyone.</h2>
+  <div style="height:28px"></div>
 
-<section class="testimonials-section">
-  <div class="section-wide">
-    <div class="section-heading">What readers are saying</div>
-    <div class="testimonials-grid">
-      <div class="t-card">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">I'm already planning to read this book again. The parts about speaking with passion regardless of audience size, and seeing every speaking opportunity as a chance to transform your listeners, really stood out. Your experience makes your message authentic. I've already recommended it to someone and I'm applying what I learned in small group talks.</p>
-        <div class="t-name">Clinton O.</div>
-      </div>
-      <div class="t-card">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">Simplified yet undiluted message.</p>
-        <div class="t-name">Stephanie V.</div>
-      </div>
-      <div class="t-card">
-        <div class="t-stars">★★★★★</div>
-        <p class="t-quote">The excellence and simple communication of this book can make it stand side by side the Harvard Classics.</p>
-        <div class="t-name">Joy O.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="offer-section" id="BUY">
-  <div class="offer-wrap">
-    <div class="offer-header">
-      <p>One decision. One book. Everything changes.</p>
-      <div class="offer-header-title">Get Talk's Not Cheap</div>
-    </div>
-    <div class="offer-body">
-      <div class="offer-tier-price">₦5,000</div>
-      <ul class="offer-includes">
-        <li>Talk's Not Cheap — Full book, delivered instantly to your email</li>
-        <li>Discover which of the 3 speaker types you are — and how to move up</li>
-        <li>The framework for commanding value every time you speak</li>
-        <li>The storytelling system that makes your message stick</li>
-        <li>The money conversation — set your fees, negotiate your terms, build income from your voice</li>
-        <li>Invitation to apply for private mentorship inside the book</li>
+  <div class="fw-grid">
+    <div class="fw-box yes">
+      <p class="fw-label">This is for you if</p>
+      <ul class="fw-list">
+        <li>You communicate regularly but your words don't seem to change anything</li>
+        <li>You get applause but not the opportunities, fees, or respect you deserve</li>
+        <li>You're a coach, trainer, pastor, consultant, or entrepreneur who leads with your voice</li>
+        <li>You know there's a next level and you're ready to find it</li>
+        <li>You want people to think about what you said long after you've gone</li>
       </ul>
-      <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-black">Yes — Get the Book Now</a>
-      <div class="guarantee-nudge">Not satisfied? Full refund. In 48 hours. You keep the book.</div>
+    </div>
+    <div class="fw-box no">
+      <p class="fw-label">This is not for you if</p>
+      <ul class="fw-list">
+        <li>You want a magic trick that requires zero effort</li>
+        <li>You're not willing to apply what you read</li>
+        <li>You think confidence alone commands a conversation</li>
+        <li>You're looking for a script to memorize, not a craft to develop</li>
+      </ul>
     </div>
   </div>
 </section>
+</div>
 
-<section class="hurry-section">
-  <div class="hurry-title">You are reading this before<br>we hit <em>1,000 copies.</em></div>
-  <div class="hurry-body">That matters. Because everything changes after that.<br><br>You already know whether this book is for you. The only question left is whether you get it now — or later, at a higher price.</div>
-  <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-red" style="font-size:16px;padding:20px 56px;">Yes — Get the Book Now at ₦5,000</a>
-</section>
+<!-- TESTIMONIALS -->
+<div class="band band-dark">
+<section class="sec">
+  <span class="sh-meta">What readers are saying</span>
+  <h2 class="sh">From people who read it<br>and applied it.</h2>
+  <div style="height:28px"></div>
 
-<section class="faq-section">
-  <div style="max-width:700px;margin:0 auto;">
-    <div class="section-heading">Questions you might have</div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">I'm not a professional speaker. Is this still for me?</div>
-        <div class="faq-a">Yes. If you pitch, present, lead, teach, or sell — you are a speaker. This book is for you.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How do I receive the book after payment?</div>
-        <div class="faq-a">Immediately. The moment your payment is confirmed on Selar, the book is delivered to your email automatically. No waiting. No manual process. You can start reading within minutes.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What makes this different from other speaking books?</div>
-        <div class="faq-a">Most speaking books tell you to breathe and make eye contact. This one tells you who to be and how to exchange your value. It deals with your identity as a speaker, the psychology behind how you're perceived, and the specific steps to convert your speaking into real income and influence.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What is the mentorship mentioned in the book?</div>
-        <div class="faq-a">Inside the book, Jeffrey invites readers to apply for a private, selective mentorship collaboration. This is not a mass program. It is a high-touch engagement for those ready to build their speaking career seriously. Details are inside.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What if I want my money back?</div>
-        <div class="faq-a">Simple. If you read the book and feel it was not worth what you paid, send Jeffrey a message within 48 hours of purchase. Your payment is returned and you keep the book regardless. There is zero risk to you.</div>
-      </div>
+  <div class="testis">
+    <div class="testi">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">
+        "I'm already planning to read this book again. The parts about speaking with passion regardless of audience size, and seeing every speaking opportunity as a chance to transform your listeners, really stood out. Your experience makes your message authentic. I've already recommended it to someone and I'm applying what I learned in small group talks."
+      </p>
+      <p class="testi-name">Clinton O.</p>
+    </div>
+
+    <div class="testi">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">
+        "The excellence and simple communication of this book can make it stand side by side the Harvard Classics."
+      </p>
+      <p class="testi-name">Joy O.</p>
+    </div>
+
+    <div class="testi">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">
+        "Simplified yet undiluted message."
+      </p>
+      <p class="testi-name">Stephanie V.</p>
     </div>
   </div>
 </section>
+</div>
 
-<section class="final-cta">
-  <div class="final-cta-big">Talk isn't cheap.</div>
-  <div class="final-cta-sub">Don't make yours one.</div>
-  <a href="https://selar.com/tnc" onclick="fbq('track','ViewContent',{content_name:'TNC Book',value:5000,currency:'NGN'})" class="btn btn-white">Get the Book — Start Today</a>
+<!-- AUTHOR -->
+<div class="band band-white">
+<section class="sec">
+  <span class="sh-meta">About the author</span>
+  <div style="height:16px"></div>
+  <div class="author">
+    <img src="https://i.ibb.co/Kkrjf1W/IMG-20251010-WA0013.jpg" alt="Jeffrey Epete">
+    <div>
+      <p class="author-name">Jeffrey Epete</p>
+      <p class="author-role">Speaker & Trainer · Author · Transformation Strategist</p>
+      <p class="author-bio">I have spent years on stages, in boardrooms, and in coaching & mentoring sessions across Nigeria. I have watched people with extraordinary ideas be ignored, and people with ordinary ideas command full attention, and I studied exactly why.</p>
+      <p class="author-bio" style="margin-top:14px">I am not a professor. I am a practitioner. I wrote Talk's Not Cheap because there is a framework behind every communicator who commands a conversation, and it can be learned. I wanted to put everything into one place, at a price that removes every excuse.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- OFFER -->
+<div class="band band-paper">
+<section class="sec" style="scroll-margin-top:20px" id="get">
+  <div class="offer">
+    <p class="offer-eyebrow">Get the book today</p>
+    <h2 class="offer-headline">Talk's Not Cheap</h2>
+    <p class="offer-price">₦5,000</p>
+    <p class="offer-price-note">One-time payment · Delivered to your inbox instantly</p>
+
+    <ul class="offer-list">
+      <li>Full Talk's Not Cheap book, in your inbox the moment you pay</li>
+      <li>The framework for commanding value every time you communicate</li>
+      <li>The storytelling system that makes your message stick</li>
+      <li>Your complete map of the Nigerian speaking market</li>
+      <li>The Speakers' Toolkit (contract, bio, email response, speaking checklist, speech preparation guides & templates)</li>
+      <li>Invitation to apply for private mentorship inside the book</li>
+    </ul>
+
+    <form class="checkout-form" id="checkoutForm">
+      <input type="text"  id="fname" name="fname" placeholder="Your full name" required autocomplete="name">
+      <input type="email" id="femail" name="femail" placeholder="Your active email" required autocomplete="email">
+      <input type="tel"   id="fphone" name="fphone" placeholder="Phone number (e.g. 08012345678)" required autocomplete="tel">
+      <button type="submit" class="btn-red" id="submitBtn">GET IT NOW →</button>
+    </form>
+
+    <p class="form-note" style="margin-top:14px">Read it. If it's not worth it, full refund within 48 hours. You keep the book.</p>
+  </div>
+
+  <div class="guarantee-bar">
+    <p><strong>Zero risk.</strong> Read Talk's Not Cheap. If you do not find it worth every naira, send Jeffrey a message within 48 hours. Your full payment is returned the same day, and you keep the book regardless. No argument. No conditions.</p>
+  </div>
+</section>
+</div>
+
+<!-- FAQ -->
+<div class="band band-warm">
+<section class="sec">
+  <span class="sh-meta">Questions you might have</span>
+  <div style="height:16px"></div>
+  <div class="faq">
+    <details>
+      <summary>I'm not a professional speaker. Is this still for me?</summary>
+      <div>Yes. If you pitch, present, lead, teach, negotiate, or sell — you communicate for a living. This book is for you. The skills inside are life skills, not stage skills.</div>
+    </details>
+    <details>
+      <summary>How do I receive the book after payment?</summary>
+      <div>Immediately. The moment your payment is confirmed, the book is delivered to your email automatically. No waiting. No manual process. You can start reading within minutes.</div>
+    </details>
+    <details>
+      <summary>What makes this different from other communication books?</summary>
+      <div>Most books tell you to breathe and make eye contact. This one tells you who to be. It deals with your identity as a communicator, the psychology behind how you're perceived, and how to build a voice that works in the Nigerian context — not a borrowed Western framework.</div>
+    </details>
+    <details>
+      <summary>What is the mentorship mentioned in the book?</summary>
+      <div>Inside the book, Jeffrey invites readers to apply for a private, selective mentorship collaboration. This is not a mass programme. It is a high-touch engagement for those who are serious about building their voice and their platform. Full details are inside.</div>
+    </details>
+    <details>
+      <summary>What if I want my money back?</summary>
+      <div>Simple. Read the book. If you feel it was not worth what you paid, send Jeffrey a message within 48 hours. Your money is returned the same day, and you keep the book regardless. There is zero risk to you.</div>
+    </details>
+  </div>
+</section>
+</div>
+
+<!-- CLOSING -->
+<section class="closing">
+  <h2>Your voice is not<br>the problem.</h2>
+  <p class="closing-body">
+    What's missing is the framework that turns a good communicator into someone people cannot stop thinking about after you've spoken, and that framework is in this book.
+  </p>
+  <p class="closing-body" style="margin-top:0">
+    The only question left is whether you get it today.
+  </p>
+  <p class="closing-price">For <strong>₦5,000.</strong></p>
+  <a href="#get" class="btn-red" style="display:inline-block;width:auto;padding:18px 52px;font-size:17px;margin-top:0" onclick="setTimeout(()=>{document.getElementById('fname').focus()},400)">Get Talk's Not Cheap</a>
+  <span class="closing-sub">Delivered instantly · 48-hour money-back guarantee</span>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 Jeffrey Epete &nbsp;·&nbsp; <a href="mailto:thejeffreyepete@gmail.com">thejeffreyepete@gmail.com</a> &nbsp;·&nbsp; All rights reserved.</p>
-  <p style="margin-top:8px;">Talk's Not Cheap is a book delivered digitally. Individual results depend on effort and application.</p>
+  <p>© 2026 Jeffrey Epete · <a href="mailto:thejeffreyepete@gmail.com">thejeffreyepete@gmail.com</a></p>
+  <p style="margin-top:8px">Talk's Not Cheap is a digital book. Individual results depend on effort and application.</p>
 </footer>
 
-<script defer>
-document.addEventListener('DOMContentLoaded',function(){
-  var nav=document.getElementById('stickyNav');
-  var ticking=false;
-  window.addEventListener('scroll',function(){
-    if(!ticking){
-      window.requestAnimationFrame(function(){
-        nav.classList.toggle('visible',window.scrollY>500);
-        ticking=false;
-      });
-      ticking=true;
-    }
-  },{passive:true});
+<!-- STICKY MOBILE CTA -->
+<div class="sticky">
+  <span>Talk's Not Cheap</span>
+  <a href="#get" class="btn-red" onclick="setTimeout(()=>{document.getElementById('fname').focus()},400)">Get the Book</a>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">Taking you to checkout...</div>
+
+<script>
+// =============================================
+// CONFIGURATION — update these values
+// =============================================
+const SELAR_CHECKOUT = 'https://selar.com/tnc/?add_to_cart=1';
+
+// Google Sheets Web App URL
+// Steps to set up:
+// 1. Open your Google Sheet
+// 2. Extensions > Apps Script
+// 3. Paste the Apps Script code below into the editor
+// 4. Deploy > New deployment > Web app
+//    Execute as: Me | Who has access: Anyone
+// 5. Copy the deployment URL and paste it here
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwHpIKtoD6-vwQYXIxYtStbi2UQMh9FsMbsjRXPsPTt_J-HfWuQqwHJYZc3XVerFMaA/exec';
+
+// =============================================
+// Apps Script code to paste in Google Sheets:
+// =============================================
+/*
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  sheet.appendRow([
+    new Date(),
+    data.fullname,
+    data.email,
+    data.mobile
+  ]);
+  return ContentService
+    .createTextOutput(JSON.stringify({result:'success'}))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+*/
+// =============================================
+
+const form = document.getElementById('checkoutForm');
+const btn  = document.getElementById('submitBtn');
+const toast = document.getElementById('toast');
+
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+function buildSelarURL(name, email, phone) {
+  const params = new URLSearchParams({
+    fullname: name,
+    email: email,
+    mobile: phone
+  });
+  return SELAR_CHECKOUT + '&' + params.toString();
+}
+
+async function saveToSheet(name, email, phone) {
+  if (!SHEET_URL || SHEET_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') return;
+  try {
+    await fetch(SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fullname: name, email: email, mobile: phone })
+    });
+  } catch(e) {
+    // Silent fail — don't block checkout if sheet capture fails
+  }
+}
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const name  = document.getElementById('fname').value.trim();
+  const email = document.getElementById('femail').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+
+  if (!name || !email || !phone) return;
+
+  btn.textContent = 'Taking you to checkout...';
+  btn.classList.add('loading');
+  showToast('Taking you to checkout...');
+
+  // Save to Google Sheet (non-blocking)
+  saveToSheet(name, email, phone);
+
+  // Short delay so the user sees feedback, then redirect
+  setTimeout(() => {
+    window.location.href = buildSelarURL(name, email, phone);
+  }, 800);
 });
 </script>
+
 </body>
 </html>
